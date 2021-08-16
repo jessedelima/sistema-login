@@ -31,3 +31,5 @@
 -   [x] Criar o repositório
 -   [x] Linkar o projeto com o repositório
 -   [x] Subir o projeto
+
+Desenvolvido por Guilherme Miranda
