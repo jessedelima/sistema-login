@@ -12,14 +12,14 @@
 
 # MySQL
 
--   [ ] Criar o banco de dados
--   [ ] Criar a tabela users (id, nome, email, senha)
+-   [x] Criar o banco de dados
+-   [x] Criar a tabela usuarios (id, nome, email, senha)
 
 # NODE JS
 
--   [ ] Criar o projeto sistema-login-node
--   [ ] Instalar libs (typeorm, mysql, express, typescript)
--   [ ] Instalar dev libs (express, node)
+-   [x] Criar o projeto sistema-login-node (npm init -y)
+-   [x] Instalar libs (typeorm, mysql, express, typescript)
+-   [x] Instalar dev libs (express, node)
 -   [ ] Configurar o TypeScript
 -   [ ] Configurar a base de dados
 -   [ ] Criar as rotas
