@@ -20,8 +20,8 @@
 -   [x] Criar o projeto sistema-login-node (npm init -y)
 -   [x] Instalar libs (typeorm, mysql, express, typescript)
 -   [x] Instalar dev libs (express, node)
--   [ ] Configurar o TypeScript (npx tsc --init)
--   [ ] Configurar a base de dados
+-   [x] Configurar o TypeScript (npx tsc --init)
+-   [x] Configurar a base de dados
 -   [ ] Criar as rotas
 -   [ ] Criar as entities
 -   [ ] Criar as controllers
