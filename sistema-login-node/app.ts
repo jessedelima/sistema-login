@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import express, { Request, Response } from "express";
 import { TryDBConnect } from "./database";
+import { routes } from "./src/routes";
 
 const app = express();
 
@@ -13,5 +14,7 @@ app.use(async (req: Request, res: Response, next) => {
 		});
 	}, next);
 });
+
+app.use(routes);
 
 app.listen(8000, () => console.log("Servidor rodando na porta 8000"));

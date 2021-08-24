@@ -1,11 +1,9 @@
-import { Connection, createConnection, getConnection } from "typeorm";
+import { createConnection, getConnection } from "typeorm";
 
 const DBConnect = async () => {
-	let connection: Connection = getConnection();
-
-	if (connection) {
-		await connection.connect();
-	} else {
+	try {
+		getConnection();
+	} catch (error) {
 		await createConnection();
 	}
 
