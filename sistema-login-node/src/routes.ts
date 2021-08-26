@@ -1,11 +1,10 @@
 import { Router } from "express";
+import { UsuariosController } from "./controllers/UsuariosController";
 
 const routes = Router();
 
-const Login = () => {
-	console.log("Logou....");
-};
+const usuariosController = new UsuariosController();
 
-routes.get("/login", Login);
+routes.post("/login", usuariosController.login);
 
 export { routes };

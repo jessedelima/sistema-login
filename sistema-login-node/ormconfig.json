@@ -4,5 +4,6 @@
 	"port": 3306,
 	"username": "root",
 	"password": "gui040593",
-	"database": "sistema_login"
+	"database": "sistema_login",
+	"entities": ["src/entities/**.ts"]
 }

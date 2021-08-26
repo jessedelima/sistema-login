@@ -23,8 +23,8 @@
 -   [x] Configurar o TypeScript (npx tsc --init)
 -   [x] Configurar a base de dados
 -   [x] Criar as rotas
--   [ ] Criar as entities
--   [ ] Criar as controllers
+-   [x] Criar as entities
+-   [x] Criar as controllers
 
 # GIT
 
