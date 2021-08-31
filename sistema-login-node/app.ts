@@ -2,8 +2,11 @@ import "reflect-metadata";
 import express, { Request, Response } from "express";
 import { TryDBConnect } from "./database";
 import { routes } from "./src/routes";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 

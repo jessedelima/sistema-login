@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
@@ -29,6 +30,24 @@ const Login = () => {
 		}
 	}, [email, password]);
 
+	const entrar = () => {
+		axios
+			.post("http://localhost:8000/login", {
+				email: email,
+				senha: password,
+			})
+			.then((retorno) => {
+				if (retorno.data.erro) {
+					alert(retorno.data.erro);
+				} else {
+					console.log(retorno);
+				}
+			})
+			.catch((erro) => {
+				console.log(erro);
+			});
+	};
+
 	return (
 		<div className={container}>
 			<Paper elevation={1} style={{ width: 800, height: 500 }}>
@@ -55,6 +74,7 @@ const Login = () => {
 							variant="contained"
 							color="primary"
 							disabled={isDisabled}
+							onClick={() => entrar()}
 						>
 							Entrar
 						</Button>

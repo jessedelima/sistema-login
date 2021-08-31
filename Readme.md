@@ -5,7 +5,7 @@
 -   [x] Criação de tela de login (Input, Button)
 -   [x] Estilização da tela de login
 -   [x] Criação de states (useState - React Hooks)
--   [ ] Integração com o back end
+-   [x] Integração com o back end
 -   [ ] Criação contexts (useContext - React Hooks)
 -   [ ] Persistência de dados (Login - localStorage)
 -   [ ] Criação de tela do usuário logado
