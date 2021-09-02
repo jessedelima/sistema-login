@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AutenticacaoProvider from "./ctx/autenticacao";
+import Dashboard from "./views/Dashboard";
 import Login from "./views/Login";
 
 export default function App() {
@@ -11,7 +12,9 @@ export default function App() {
 					<Route path="/login">
 						<Login />
 					</Route>
-					<Route path="/">{/* <Home /> */}</Route>
+					<Route path="/">
+						<Dashboard />
+					</Route>
 				</Switch>
 			</AutenticacaoProvider>
 		</Router>
