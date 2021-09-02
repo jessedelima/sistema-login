@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import styles from "./styles";
 import logo from "../../img/logo-soitech.png";
+import { AutenticacaoContext } from "../../ctx/autenticacao";
 
 const Login = () => {
 	const {
@@ -22,6 +22,8 @@ const Login = () => {
 	const [password, setPassword] = useState("");
 	const [isDisabled, setIsDisabled] = useState(true);
 
+	const { entrar } = useContext(AutenticacaoContext);
+
 	useEffect(() => {
 		if (email !== "" && password !== "") {
 			setIsDisabled(false);
@@ -29,24 +31,6 @@ const Login = () => {
 			setIsDisabled(true);
 		}
 	}, [email, password]);
-
-	const entrar = () => {
-		axios
-			.post("http://localhost:8000/login", {
-				email: email,
-				senha: password,
-			})
-			.then((retorno) => {
-				if (retorno.data.erro) {
-					alert(retorno.data.erro);
-				} else {
-					console.log(retorno);
-				}
-			})
-			.catch((erro) => {
-				console.log(erro);
-			});
-	};
 
 	return (
 		<div className={container}>
@@ -74,7 +58,7 @@ const Login = () => {
 							variant="contained"
 							color="primary"
 							disabled={isDisabled}
-							onClick={() => entrar()}
+							onClick={() => entrar(email, password)}
 						>
 							Entrar
 						</Button>
