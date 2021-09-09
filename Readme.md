@@ -6,9 +6,9 @@
 -   [x] Estilização da tela de login
 -   [x] Criação de states (useState - React Hooks)
 -   [x] Integração com o back end
--   [ ] Criação contexts (useContext - React Hooks)
--   [ ] Persistência de dados (Login - localStorage)
--   [ ] Criação de tela do usuário logado
+-   [x] Criação contexts (useContext - React Hooks)
+-   [x] Persistência de dados (Login - localStorage)
+-   [x] Criação de tela do usuário logado
 
 # MySQL
 
